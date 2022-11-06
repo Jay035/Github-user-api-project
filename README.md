@@ -7,7 +7,7 @@
 
 ## Technologies used
 
-- Tailwind CSS
+- [Tailwind CSS](https://tailwindCSS.com)
 - [React JS](https://reactjs.org/)
 - [React-paginate]()
 - [AOS On Scroll Animation Library](https://michalsnik.github.io/aos/)
