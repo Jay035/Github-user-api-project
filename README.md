@@ -3,11 +3,11 @@
 
 ## Screenshot
 
-![Design preview for the linktree project](./src/assets/Project-screenshot.png)
+// ![Design preview for the github-user-api project](./src/assets/Project-screenshot.png)
 
 ## Technologies used
 
-- CSS3
+- Tailwind CSS
 - [React JS](https://reactjs.org/)
 - [React-paginate]()
 - [AOS On Scroll Animation Library](https://michalsnik.github.io/aos/)
