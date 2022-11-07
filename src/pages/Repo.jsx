@@ -5,9 +5,9 @@ import RepoList from "../components/RepoList";
 
 export default function Repo({items, user, pageCount, pagesVisited, repoPerPage, changePage}) {
   
-  return (
+  return !items ? <Loading /> : (
     <>
-      <h1 className="text-2xl text-white text-center font-bold mb-4">
+      <h1 data-aos="fade-up" className="text-2xl text-white text-center font-bold mb-4">
         {user}'s GitHub Repositories
       </h1>
       <div className="grid gap-8 my-10 lg:grid-cols-2 xl:grid-cols-3 xl:px-6">

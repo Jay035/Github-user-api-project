@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function RepoList(props) {
   return (
-    <section className="bg-[#282a2e] w-full max-w-[600px] mx-auto p-4 rounded-lg text-base flex flex-col gap-4">
+    <section data-aos="fade-in" className="bg-[#282a2e] w-full max-w-[600px] mx-auto p-4 rounded-lg text-base flex flex-col gap-4">
       <div className="flex gap-6 items-center">
         <h1 className="text-xl font-semibold capitalize">{props.name}</h1>
         {props.private ? (
