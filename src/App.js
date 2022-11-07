@@ -16,7 +16,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const repoPerPage = 5;
+  const repoPerPage = 6;
   const pagesVisited = pageNumber * repoPerPage;
   const pageCount = Math.ceil(items.length / repoPerPage);
 
@@ -27,10 +27,9 @@ function App() {
   useEffect(() => {
     const fetchRepos = async () => {
       const res = await fetch(
-        `https://api.github.com/users/${user}/repos?page=1&per_page=30&sort=updated`
+        `https://api.github.com/users/${user}/repos?page=1&per_page=36&sort=updated`
       );
       const data = await res.json();
-      console.log(data);
       setItems(data);
     };
 
@@ -40,56 +39,37 @@ function App() {
   AOS.init();
   return (
     <Router>
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Repo
-              items={items}
-              user={user}
-              pageCount={pageCount}
-              pagesVisited={pagesVisited}
-              repoPerPage={repoPerPage}
-              changePage={changePage}
-            />
-          }
-        />
-        <Route path="/repo/:id" element={<FullRepoDetails items={items} />} />
-      </Routes>
+      <main
+        data-aos="fade-in"
+        // data-aos-duration="1000"
+        className="font-Barlefair bg-[#1a1c1e] text-[#e7e8e8] h-screen overflow-x-hidden leading-normal pt-8 px-4"
+      >
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              items ? (
+                <Repo
+                  items={items}
+                  user={user}
+                  pageCount={pageCount}
+                  pagesVisited={pagesVisited}
+                  repoPerPage={repoPerPage}
+                  changePage={changePage}
+                />
+              ) : (
+                <Loading />
+              )
+            }
+          />
+          <Route
+            path="/repo/:name"
+            element={<FullRepoDetails items={items} />}
+          />
+        </Routes>
+      </main>
     </Router>
-
-    //   <Loading />
-    // ) : (
-    //   <main
-    //     // data-aos="fade-in"
-    //     // data-aos-duration="1000"
-    //     className="App font-Barlow bg-[#1a1c1e] text-[#e7e8e8] h-screen overflow-x-hidden leading-normal pt-8 px-4"
-    //   >
-    //     <h1 className="text-2xl text-white text-center font-bold mb-4">
-    //       {user}'s GitHub Repositories
-    //     </h1>
-    //     <div className="grid gap-8 my-10 lg:grid-cols-2 xl:grid-cols-3 xl:px-6">
-    //       {items.slice(pagesVisited, pagesVisited + repoPerPage).map((item) => (
-    //         <Profile key={item.id} {...item} />
-    //       ))}
-    //     </div>
-
-    //     <ReactPaginate
-    //       breakLabel="..."
-    //       pageRangeDisplayed={1}
-    //       renderOnZeroPageCount={null}
-    //       previousLabel={"Previous"}
-    //       nextLabel={"Next"}
-    //       pageCount={pageCount}
-    //       onPageChange={changePage}
-    //       containerClassName={"paginationBtns"}
-    //       previousLinkClassName={"previousBtn"}
-    //       nextLinkClassName={"nextBtn"}
-    //       disabledClassName={"paginationDisabled"}
-    //       activeClassName={"paginationActive"}
-    //     />
-    //   </main>
   );
 }
 

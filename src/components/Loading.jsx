@@ -1,6 +1,6 @@
 
 export default function Loading() {
   return (
-    <div>Loading</div>
+    <div className="text-[#eee]">Loading...</div>
   )
 }
