@@ -2,64 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  /* --------------------------------------- */
+  /* custom properties */
+  /* --------------------------------------- */
 
-    /* --------------------------------------- */
-    /* custom properties */
-    /* --------------------------------------- */
-
-    /* remove animations for people with special settings */
-    @media (prefers-reduced-motion: reduce){
-        *,
-        *::before,
-        *::after{
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-        }
+  /* remove animations for people with special settings */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
+  }
 
-    .paginationBtns {
-        width: 100%;
-        height: 60px;
-        list-style: none;
-        display: flex;
-        padding: 1rem;
-        justify-content: center;
-        align-items: center;
-        margin: 4em auto 2em;
-        overflow: hidden;
-      }
-      
-      .paginationBtns li {
-        margin-inline: 5px;
-      }
-      
-      /* disabled state */
-      .paginationDisabled {
-        opacity: 0.7;
-      }
-      
-      .paginationBtns a {
-        padding: 10px;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px;
-        border: 1px solid #4e5051;
-        color: #fff;
-        transition: all ease 0.3s;
-        cursor: pointer;
-      }
-      
-      .paginationBtns a:hover {
-        color: #fff;
-        background-color: #4e5051;
-      }
-      
-      .paginationActive a {
-        color: #fff;
-        background-color: #4e5051;
-      }
-      
+  .paginationBtns {
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 4em auto 2em;
+    overflow: hidden;
+  }
+
+  .paginationBtns li {
+    margin-inline: 5px;
+  }
+
+  /* disabled state */
+  .paginationDisabled {
+    opacity: 0.7;
+  }
+
+  .paginationBtns a {
+    padding: 10px;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #4e5051;
+    color: #fff;
+    transition: all ease 0.3s;
+    cursor: pointer;
+  }
+
+  .paginationBtns a:hover {
+    color: #fff;
+    background-color: #4e5051;
+  }
+
+  .paginationActive a {
+    color: #fff;
+    background-color: #4e5051;
+  }
 }
