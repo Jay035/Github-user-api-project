@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     const fetchRepos = async () => {
       const res = await fetch(
-        `https://api.github.com/users/${user}/repos?page=1&per_page=36&sort=updated`
+        `https://api.github.com/users/${user}/repos?page=1&per_page=30&sort=updated`
       );
       const data = await res.json();
       setItems(data);
