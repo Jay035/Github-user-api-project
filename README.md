@@ -3,7 +3,7 @@
 
 ## Screenshot
 
-// ![Design preview for the github-user-api project](./src/assets/Project-screenshot.png)
+![Design preview for the github-user-api project](./src/github-project-screenshot.png)
 
 ## Technologies used
 
