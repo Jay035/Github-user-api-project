@@ -7,6 +7,12 @@
   /* custom properties */
   /* --------------------------------------- */
 
+  body{
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
   /* remove animations for people with special settings */
   @media (prefers-reduced-motion: reduce) {
     *,
