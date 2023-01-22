@@ -1,15 +1,11 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ReactPaginate from "react-paginate";
 import Loading from "./pages/Loading";
 import Repo from "./pages/Repo";
 import FullRepoDetails from "./pages/FullRepoDetails";
-import Footer from "./components/Footer";
 import Error404Page from "./pages/Error404Page";
-// import { motion } from "framer-motion";
 
 function App() {
   const [user, setUser] = useState("Jay035");
@@ -47,7 +43,7 @@ function App() {
           {/* Full repo details */}
           <Route
             path="/repo/:name"
-            element={<FullRepoDetails items={items} loading={loading} />}
+            element={<FullRepoDetails items={items} />}
           />
 
           {/* when a user goes to a non-existent route */}

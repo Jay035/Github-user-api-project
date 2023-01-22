@@ -1,6 +1,6 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import ReactPaginate from "react-paginate";
-import Loading from "./Loading";
+// import Loading from "./Loading";
 import RepoList from "../components/RepoList";
 import Profile from "../components/Profile";
 import Footer from "../components/Footer";

@@ -2,12 +2,10 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Loading from "./Loading";
 
-export default function FullRepoDetails({ items, loading }) {
+export default function FullRepoDetails({ items}) {
   const { name } = useParams();
 
-  return loading ? (
-    <Loading />
-  ) : (
+  return (
     <>
       <Link
         to="/"
