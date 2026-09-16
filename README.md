@@ -14,6 +14,6 @@
 
 ## Developer Info
 
-- [Website](https://codexjay.vercel.app)
+- [Website](https://codexjay.dev)
 - [Twitter](https://twitter.com/Chibuike035)
 - [LinkedIn](https://www.linkedin.com/in/chibuike-ukandu-8385401b0/)
